@@ -1,0 +1,76 @@
+/* Main navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #091644;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Mild shadow to highlight the navbar */
+  border-bottom: 1px solid #e0e0e0; /* Optional: subtle border at the bottom for added definition */
+}
+
+/* Container for the left section (logo) */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Center section for the title */
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Allows for positioning adjustments */
+  left: 210px;
+}
+
+/* Right section for menu items */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+/* Styling for the logo image */
+.navbar-logo {
+  width: 200px; /* Adjust size according to your logo */
+  height: 40px;
+}
+
+/* Styling for the center title text */
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+/* Styling for the menu container on the right */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  position: relative; /* Allows for positioning adjustments */
+  left: -30px;
+}
+
+/* Styling for individual menu items */
+.navbar-menu-item {
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Hover effect for menu items */
+.navbar-menu-item:hover {
+  color: #3b6ccf; /* Hover color */
+}

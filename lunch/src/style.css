@@ -1,0 +1,267 @@
+body {
+  /* Basic body styling */
+  font-family: "New Hero", "Poppins", sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden; 
+  height: calc(100vh - 100px);
+}
+
+.dashboard {
+  /* Main dashboard container */
+  display: flex;
+  height: 100%;
+}
+
+.content {
+  /* Content area below the navbar */
+  margin-left: 0;
+  margin-top: 5px; /* Adjust for navbar height */
+  width: 100%;
+  padding: 20px;
+  overflow-y: auto; /* Enable scrolling */
+  height: calc(100vh - 70px); /* Adjust height to account for navbar */
+}
+
+/* Apply styles directly to the h2 elements */
+ .dashboard-box h2,
+  #menu-management-box h2 {
+text-transform: uppercase;
+color: #091644; /* Dark blue color */
+font-weight: bold;
+}
+
+
+
+.dashboard-grid {
+  /* Grid layout for the top boxes (Order Progress, Weekly Orders) */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 40px;
+  width: 100%;
+  padding-top: 60px; /* Space below the navbar */
+}
+
+.dashboard-box {
+  /* Styling for the top boxes (Order Progress, Weekly Orders) */
+  background-color: #d1d4e3;
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1), 0 1px 15px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.progress-bar-day {
+  /* Margin for each day in the progress bar */
+  margin-bottom: 5px;
+}
+
+.day-name {
+  /* Styling for the day names in the progress bar */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  /* Styling for the progress bars */
+  height: 20px;
+  color: white;
+  text-align: center;
+  max-width: 650px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* Styling for the horizontal box (Menu Management) */
+.menu-management-box {
+  background-color: #d1d4e3;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1), 0 1px 15px rgba(0, 0, 0, 0.06);
+  margin-top: 10px;
+  margin-bottom: 0px; /* Add white space below the horizontal box */
+  height: auto;
+}
+
+.menu-header {
+  /* Header section inside the horizontal box, containing the title and buttons */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.menu-actions button {
+  /* Buttons inside the horizontal box (Add, Delete, Update) */
+  padding: 8px 16px;
+  background-color: #1d1f2a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin-left: 10px;
+}
+
+.menu-actions button:hover {
+  /* Hover effect for the buttons */
+  background-color: #3b6ccf;
+}
+
+.menu-items {
+  /* Container for the day-wise menu items inside the horizontal box */
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-weight: 600;
+}
+
+.menu-item {
+  /* Individual menu item styling inside the horizontal box */
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-item img {
+  /* Square image styling for menu items */
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid #1d1f2a;
+  border-radius: 8px; /* Square with rounded corners */
+}
+
+.menu-item h3 {
+  /* Styling for the day names in the horizontal box */
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #091644;
+}
+
+.menu-item p {
+  /* Styling for the menu item name and price */
+  margin: 0;
+  color: #1d1f2a;
+}
+
+.menu-modal {
+  /* Modal styling for Add, Delete, Update actions */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 370px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-modal-overlay {
+  /* Dark overlay background for modals */
+  background-color: rgba(0, 0, 0, 0.5);
+  
+}
+
+.menu-modal input[type="text"],
+.menu-modal input[type="file"],
+.menu-select {
+  /* Styling for inputs and dropdowns in the modal */
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid #1d1f2a;
+  border-radius: 4px;
+  background-color: #f8f9ff;
+}
+
+.action-button,
+.delete-button {
+  /* General button styling for actions */
+  padding: 10px 10px;
+  background-color: #1d1f2a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover,
+.delete-button:hover {
+  /* Hover effect for action buttons */
+  background-color: #3b6ccf;
+}
+
+
+/* X Button Styling for all Modals */
+.close-button-x {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+}
+
+.close-button-x:hover {
+  color: #d9534f; /* Red hover color for the X button */
+}
+
+
+.report-modal-overlay {
+  /* Dark overlay background for the reports */
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.report-modal {
+  /* Styling for the reports */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+
+.menu-modal-overlay,
+.report-modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.7); /* Dim the background */
+z-index: 1000; /* Ensure it covers the entire screen */
+}
+
+.menu-modal,
+.report-modal {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: white;
+padding: 2rem;
+border-radius: 10px;
+z-index: 1010; /* Ensure it appears above the overlay */
+}
